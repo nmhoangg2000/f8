@@ -1,0 +1,129 @@
+h1{
+    color: red;
+    font-size: 20px;
+}
+/* id dùng # */
+#first-heading.heading-id{  
+    color: seagreen;
+}
+/* class dùng dấu . */
+.second-heading{
+    color: slateblue;
+    font-size: 30px;
+}
+ol{
+    color: violet;
+}
+ol{
+    color: yellow !important; /*!important đc ưu tiên*/
+}
+/* Biến */
+:root{
+    --text-color: blue;
+}
+h2.third-heading{
+    color: var(--text-color);
+}
+.box{
+    width: 100px;
+    height: 100px;
+    /* background-color: blue; */
+    float: left;
+}
+.box1{
+    background-color: blue;
+    margin-left: 20px;
+}
+.box2{
+    background-color: brown;
+    box-sizing: border-box;
+    padding:16px;
+    border: 2px solid #333333;
+}
+.box3{
+    background-color: crimson;
+    margin-top: 20px;
+    /* padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px; */
+    padding: 10px;
+    border: 10px solid darkcyan;
+    /* border-width: 10px;
+    border-style: solid;
+    border-color: darkblue ; */
+}
+/* padding để đệm thêm vào */
+/* margin tạo khoảng cách */
+
+.header{
+    width: 100%;
+    height: 100vh;
+    /* background-color: red;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 10px dashed #cccccc; */
+    /* background-clip: border-box;  */
+    background-image: linear-gradient(0deg,rgba(255,255,0,0.5), rgba(0,0,255)),url(https://znews-photo.zadn.vn/w660/Uploaded/mdf_rkxrxd/2019_11_10/Bi_mat_MrBean_1.jpg);
+    background-size: 100px ;
+    background-position: top; /*vị trí của bcakground*/
+    background-repeat: repeat;
+}
+
+.dantri::after{
+    content: "("attr(href)")";
+}/* attr(): attribute  */
+.hoang{
+    width: calc(80%+20%);
+    height: 120px;
+    background:rgb(190,124,157);
+}
+.hoang::after{
+    content: attr(data-title);
+}
+/* pseudo class */
+/* :root tham chiếu tới phần tử gốc của file html */
+/* :hover kích hoạt khi di chuột lên */
+/* :active click chuột thì sẽ kích hoạt nội dung bên trong */
+/* :first-child xử lý phần tử đầu */
+/* :last-child xử lý phần tử cuối */
+p:hover{
+    color: red;
+}
+.hoang:active{
+    background-color: salmon;
+}
+.li1:first-child{
+    color: rebeccapurple;
+    font-size: 30px;
+}
+.li2:last-child{
+    color: rebeccapurple;
+    font-size: 30px;
+}
+
+.hoang::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+}
+.hoang::after{
+    content: "Bonjour";
+    color: red;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+}
+h1::selection{
+    background-color: sienna;
+    color: #ffffff;
+}
+/* relative là vị trí tương đối lấy chính mình làm gốc tọa độ */
+h3{
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
